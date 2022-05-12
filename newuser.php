@@ -12,10 +12,13 @@ try{
 
     $mail = $_POST["mail"];
     $pass = $_POST["pass1"];
-    $deadline = $_POST["deadline"];
-   
+    $name = $_POST["name"];
+    $address1 = $_POST["address1"];
+    $address2 = $_POST["address2"];
+    $phone = $_POST["phone"]
+
     $dsn = "mysql:dbname=ajairu1;host=localhost";  // mysqlに接続
-    $user = "temporary";
+    $user = "members";
     $password = "";
 
 
@@ -23,24 +26,24 @@ try{
 
 
     // プレースホルダ(パラメータ化)
-    $sql = "INSERT INTO `members`(`id`, `mail address`, `password`, `name`, `address`, `address2`, `telephone number`) VALUES (?,?,?,?,?,?,?)";
-
-
+    $sql = "UPDATE `members` SET `id`=?,`mail address`=?,`password`=?,`name`=?,`address`=?,`address2`=?,`telephone number`=?";
 
     // プリペアドステートメント
     $stmt = $dbn->prepare($sql);
 
-    $data[] = $id;
-    $data[] = $mail;
-    $data[] = $pass;
-    $data[] = $deadline;
-    
-  
-    $count = $stmt->execute($data);
+    $data2[] = $id;
+    $data2[] = $mail;
+    $data2[] = $pass;
+    $data2[] = $name;
+    $data2[] = $address1;
+    $data2[] = $address2;
+    $data2[] = $phone;
+
+    $count2 = $stmt->execute($data2);
 
     //結果を表示
-    print $name;
-    print 'さんを追加しました。<br />';
+    // print $name;
+    // print 'さんを追加しました。<br />';
 
 
       
@@ -51,7 +54,7 @@ try{
 
 ?>
 
-<a href="newuser2.php">戻る</a>
+<a href="change2.php">戻る</a>
 
 </body>
 </html>

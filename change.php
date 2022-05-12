@@ -15,7 +15,7 @@ try{
     $name = $_POST["name"];
     $address1 = $_POST["address1"];
     $address2 = $_POST["address2"];
-    $phone = $_POST["phone"]
+    $phone = $_POST["phone"];
 
     $dsn = "mysql:dbname=ajairu1;host=localhost";  // mysqlに接続
     $user = "members";

@@ -12,13 +12,10 @@ try{
 
     $mail = $_POST["mail"];
     $pass = $_POST["pass1"];
-    $name = $_POST["name"];
-    $address1 = $_POST["address1"];
-    $address2 = $_POST["address2"];
-    $phone = $_POST["phone"];
-
+    $deadline = $_POST["deadline"];
+   
     $dsn = "mysql:dbname=ajairu1;host=localhost";  // mysqlに接続
-    $user = "members";
+    $user = "temporary";
     $password = "";
 
 
@@ -36,11 +33,9 @@ try{
     $data[] = $id;
     $data[] = $mail;
     $data[] = $pass;
-    $data[] = $name;
-    $data[] = $address1;
-    $data[] = $address2;
-    $data[] = $phone;
-
+    $data[] = $deadline;
+    
+  
     $count = $stmt->execute($data);
 
     //結果を表示

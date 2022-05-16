@@ -16,8 +16,7 @@ try{
     $address1 = $_POST["address1"];
     $address2 = $_POST["address2"];
 <<<<<<< HEAD
-    $phone = $_POST["phone"]
-=======
+    $phone = $_POST["phone"];
     $phone = $_POST["phone"];
 >>>>>>> 4b27cf2d4e73ca67461030d239117dcd0e895e72
 

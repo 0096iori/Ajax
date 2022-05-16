@@ -59,7 +59,6 @@ try{
 
 </body>
 <<<<<<< HEAD
-</html>
 =======
 </html>
 >>>>>>> 4b27cf2d4e73ca67461030d239117dcd0e895e72

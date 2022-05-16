@@ -23,7 +23,7 @@ try {
         if ($name == $member["name"] && $pass == $member["password"]) {
             //ログイン認証　成功
             $_SESSION["name"] = $name;
-            header("Location:top.html");
+            header("Location:top.php");
             exit;
         } else if ($name != $member["name"] || $pass != $member["password"]) {
             //ログイン認証　失敗

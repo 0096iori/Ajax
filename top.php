@@ -27,8 +27,8 @@
                 <p><?php $members["name"] ?>様</p>
                 <!--変数を渡してもらい、氏名のところに代入-->
                 <div class="right">
-                    <span><a href="./ここにリンクを書き込み/">会員情報変更</a></span>
-                    <span><a href="./ここにリンクを書き込み/">ログアウト</a></span>
+                    <span><a href="change.php">会員情報変更</a></span>
+                    <span><a href="login.html">ログアウト</a></span>
                 </div>
 
             <?php

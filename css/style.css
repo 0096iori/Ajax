@@ -40,18 +40,6 @@ table tr {
     margin-left: 30px;
 }
 
-.btn_center {
-    width: 50%;
-    text-align: center;
-    margin: 30px auto;
-}
-
-.input_btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 10%;
-}
-
 #login_content {
     width: 500px;
     margin: 0 auto;
@@ -59,9 +47,38 @@ table tr {
     padding: 40px 20px;
 }
 
-.login_btn, .regist_btn {
+.btn_center {
+    width: 50%;
+    text-align: center;
+    margin: 30px auto;
+}
+
+.login_btn {
+    border: none;
     width: 150px;
+    height: 50px;
+}
+
+.input_btn {
+    border: none;
+}
+
+.input_btn {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
     border-radius: 5%;
+    background-color: #f0f8ff;
+    border-bottom: 4px solid #c0c5c2;
+}
+
+.regist_btn {
+    padding: 15px 40px;
+}
+
+.input_btn:hover {
+    transform: translateY(4px);
+    border-bottom: none;
 }
 
 /* テンプレート　ここまで */
@@ -73,7 +90,7 @@ table tr {
     width: 100%;
 }
 
-.right{
+.right {
     text-align: right;
 }
 
@@ -81,18 +98,14 @@ table tr {
 
 
 /* 新規登録ページ　ここから */
-#input_btn1 {
-    width: 100px;
-    height: 50px;
-    border-radius: 10%;
-    text-align: center;
-}
 
+#input_btn1,
 #input_btn2 {
-    width: 70px;
-    height: 50px;
-    border-radius: 10%;
     text-align: center;
+    width: 130px;
+    height: 50px;
+    padding: 15px;
+    margin: 0 10px;
 }
 
 #btn_center {
@@ -100,10 +113,6 @@ table tr {
     margin: 50px auto;
     display: flex;
     justify-content: space-between;
-}
-
-#btn_left,
-#btn_right {
 }
 
 /* 新規登録ページここまで */

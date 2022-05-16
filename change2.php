@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
 </head>
+<<<<<<< HEAD
 <title>登録情報の変更</title>
+=======
+<title>新規登録</title>
+>>>>>>> 4b27cf2d4e73ca67461030d239117dcd0e895e72
 <body>
 
 <?php

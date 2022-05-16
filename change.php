@@ -5,6 +5,9 @@
 </head>
 <title>登録情報の変更</title>
 <body>
+  <header>
+    <h2>変更を完了しました</h2>
+  </header>
 
 <?php
 
@@ -15,39 +18,34 @@ try{
     $name = $_POST["name"];
     $address1 = $_POST["address1"];
     $address2 = $_POST["address2"];
-<<<<<<< HEAD
-    $phone = $_POST["phone"]
-=======
     $phone = $_POST["phone"];
->>>>>>> 4b27cf2d4e73ca67461030d239117dcd0e895e72
+
 
     $dsn = "mysql:dbname=ajairu1;host=localhost";  // mysqlに接続
     $user = "members";
-    $password = "";
+    $password = "root";
 
 
     $dbn = new PDO($dsn,$user,$password);
 
 
     // プレースホルダ(パラメータ化)
-    $sql = "UPDATE `members` SET `id`=?,`mail address`=?,`password`=?,`name`=?,`address`=?,`address2`=?,`telephone number`=?";
+    $sql = "UPDATE `members` SET `mail address`=:mailaddress,`password`=:password,`name`=:name,`address1`=:address1,`address2`=:address2,`telephone number`=:telephonenumber WHERE id=1";
 
     // プリペアドステートメント
     $stmt = $dbn->prepare($sql);
 
-    $data2[] = $id;
-    $data2[] = $mail;
-    $data2[] = $pass;
-    $data2[] = $name;
-    $data2[] = $address1;
-    $data2[] = $address2;
-    $data2[] = $phone;
+    
+    $params = array(':mailaddress' => $mail, ':password' => $pass, ':name' => $name, ':address1' => $address1, ':address2' => $address2,':telephonenumber' => $phone);
 
-    $count2 = $stmt->execute($data2);
+    $count2 = $stmt->execute($params);
 
-    //結果を表示
-    // print $name;
-    // print 'さんを追加しました。<br />';
+    echo("メールアドレス：".$mail."<br>");
+    echo("パスワード：".$pass."<br>");
+    echo("お名前：".$name."<br>");
+    echo("住所1：".$address1."<br>");
+    echo("住所2：".$address2."<br>");
+    echo("電話番号：".$phone."<br>");
 
 
       
@@ -58,7 +56,7 @@ try{
 
 ?>
 
-<a href="change2.php">戻る</a>
+<a href="top.php">戻る</a>
 
 </body>
 </html>

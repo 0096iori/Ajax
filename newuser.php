@@ -20,7 +20,7 @@ try{
     $phone = $_POST["phone"];
 >>>>>>> 4b27cf2d4e73ca67461030d239117dcd0e895e72
 
-    $dsn = "mysql:dbname=ajairu1;host=localhost";  // mysqlに接続
+    $dsn = "mysql:dbname=ajairu1;host=localhost";
     $user = "members";
     $password = "";
 

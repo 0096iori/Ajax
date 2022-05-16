@@ -60,23 +60,23 @@ table tr {
 }
 
 .input_btn {
+    border: none;
+}
+
+.input_btn {
     display: inline-block;
     color: #000;
     text-decoration: none;
+    border-radius: 5%;
+    background-color: #f0f8ff;
+    border-bottom: 4px solid #c0c5c2;
 }
 
 .regist_btn {
     padding: 15px 40px;
 }
 
-.login_btn, .regist_btn {
-    border-radius: 5%;
-    background-color: #f0f8ff;
-    border-bottom: 4px solid #b0c4de;
-}
-
-.login_btn:hover,
-.regist_btn:hover {
+.input_btn:hover {
     transform: translateY(4px);
     border-bottom: none;
 }
@@ -98,18 +98,14 @@ table tr {
 
 
 /* 新規登録ページ　ここから */
-#input_btn1 {
-    width: 100px;
-    height: 50px;
-    border-radius: 10%;
-    text-align: center;
-}
 
+#input_btn1,
 #input_btn2 {
-    width: 70px;
-    height: 50px;
-    border-radius: 10%;
     text-align: center;
+    width: 130px;
+    height: 50px;
+    padding: 15px;
+    margin: 0 10px;
 }
 
 #btn_center {

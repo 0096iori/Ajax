@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <?php
+        session_start();
+        if (isset($_SESSION["id"])) {
+    ?>
     <header>
         <h2>会員情報変更</h2>
     </header>
@@ -61,6 +65,12 @@
 
         </div>
     </main>
+    <?php
+        }else{
+            echo("ログイン失敗 <br>");
+            echo("<a href='login.html'>再ログイン</a>");
+        }
+    ?>
 </body>
 
 </html>

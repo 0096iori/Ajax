@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-</head>
-<title>登録情報の変更</title>
-<body>
-  <header>
-    <h2>変更を完了しました</h2>
-  </header>
 
 <?php
 
 try{
-
+   session_start();
+   if (isset($_SESSION["id"])) {
+    $id = $_SESSION["id"];
     $mail = $_POST["mail"];
     $pass = $_POST["pass1"];
     $name = $_POST["name"];
@@ -30,13 +22,13 @@ try{
 
 
     // プレースホルダ(パラメータ化)
-    $sql = "UPDATE `members` SET `mail address`=:mailaddress,`password`=:password,`name`=:name,`address1`=:address1,`address2`=:address2,`telephone number`=:telephonenumber WHERE id=1";
+    $sql = "UPDATE `members` SET `mail address`=:mailaddress,`password`=:password,`name`=:name,`address1`=:address1,`address2`=:address2,`telephone number`=:telephonenumber WHERE `id`=:id";
 
     // プリペアドステートメント
     $stmt = $dbn->prepare($sql);
 
     
-    $params = array(':mailaddress' => $mail, ':password' => $pass, ':name' => $name, ':address1' => $address1, ':address2' => $address2,':telephonenumber' => $phone);
+    $params = array(':mailaddress' => $mail, ':password' => $pass, ':name' => $name, ':address1' => $address1, ':address2' => $address2,':telephonenumber' => $phone,':id' => $id);
 
     $count2 = $stmt->execute($params);
 
@@ -46,17 +38,14 @@ try{
     echo("住所1：".$address1."<br>");
     echo("住所2：".$address2."<br>");
     echo("電話番号：".$phone."<br>");
-
-
-      
+    echo("<a href='top.php'>戻る</a>");
+   }else{
+     echo("ログイン失敗 <br>");
+     echo("<a href='login.html'>再ログイン</a>");
+   }
     
 }catch(Exception $e){
   exit();
 }
 
 ?>
-
-<a href="top.php">戻る</a>
-
-</body>
-</html>

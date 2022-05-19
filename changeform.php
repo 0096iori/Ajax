@@ -26,31 +26,31 @@
                     <!-- ログイン情報、会員情報など入力欄 -->
                     <tr>
                         <td class="index">メールアドレス</td>
-                        <td><input type="email" name="mail" id="mail" class="input_txt"></td>
+                        <td><input type="email" name="mail" id="mail" class="input_txt" required></td>
                     </tr>
                     <tr>
                         <td class="index">パスワード</td>
-                        <td><input type="text" name="pass1" id="pass1" class="input_txt"></td>
+                        <td><input type="text" name="pass1" id="pass1" class="input_txt" required></td>
                     </tr>
                     <tr>
                         <td class="index">パスワード(確認)</td>
-                        <td><input type="text" name="pass2" id="pass2" class="input_txt"></td>
+                        <td><input type="text" name="pass2" id="pass2" class="input_txt" required></td>
                     </tr>
                     <tr>
                         <td class="index">お名前</td>
-                        <td><input type="text" name="name" id="name" class="input_txt"></td>
+                        <td><input type="text" name="name" id="name" class="input_txt" required></td>
                     </tr>
                     <tr>
                         <td class="index">住所1</td>
-                        <td><input type="text" name="address1" id="address1" class="input_txt"></td>
+                        <td><input type="text" name="address1" id="address1" class="input_txt" required></td>
                     </tr>
                     <tr>
                         <td class="index">住所2</td>
-                        <td><input type="text" name="address2" id="address2" class="input_txt"></td>
+                        <td><input type="text" name="address2" id="address2" class="input_txt" required></td>
                     </tr>
                     <tr>
                         <td class="index">電話番号</td>
-                        <td><input type="number" name="phone" id="phone" class="input_txt"></td>
+                        <td><input type="number" name="phone" id="phone" class="input_txt" required></td>
                     </tr>
                 </table>
                 <div id="btn_center">

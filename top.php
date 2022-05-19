@@ -9,33 +9,42 @@
 </head>
 
 <body>
+    <header>
+        <h2>会員ページ</h2>
+    </header>
     <main>
         <div class="center">
             <?php
-            session_start();
-            if (isset($_SESSION["name"])) {
-                $dbh = new PDO($dsn, $user, $password);
-                $id = $POST["id"];
-                $name = $_SESSION["name"];
+            $dsn = "mysql:dbname=ajairu1;host=localhost";
+            $user = "members";
+            $password = "";
 
-                $sql = "SELECT * FROM members WHERE id=:id";
-                $stmt = $dbh->prepare($sql);
-                $stmt->bindValue(":id", $id);
-                $stmt->execute();
-                $members = $stmt->fetch();
+            session_start();
+
+            if (isset($_SESSION["member"])) {
+                $member = $_SESSION["member"];
+
+                // $dbh = new PDO($dsn, $user, $password);
+                // $mail = $_SESSION["mail"];
+
+                // $sql = "SELECT * FROM members WHERE mail_address=:mail";
+                // $stmt = $dbh->prepare($sql);
+                // $stmt->bindValue(":mail", $mail);
+                // $stmt->execute();
+                // $members = $stmt->fetch();
             ?>
-                <p><?php $members["name"] ?>様</p>
-                <!--変数を渡してもらい、氏名のところに代入-->
+
+                <p><?= $member["name"] ?>様</p>
                 <div class="right">
-                    <span><a href="change.php">会員情報変更</a></span>
-                    <span><a href="login.html">ログアウト</a></span>
+                    <div class="btn_right"><a href="newuser.html" class="input_btn2">会員情報変更</a></div>
+                    <div class="btn_right"><a href="login.html" class="input_btn2">ログアウト</a></div>
                 </div>
 
             <?php
             } else {
             ?>
-            <p>このページは表示できません</p>
-            <a href="login.html">ログイン画面へ</a>
+                <p>このページは表示できません</p>
+                <a href="login.html">ログイン画面へ</a>
             <?php
             }
 

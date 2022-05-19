@@ -37,7 +37,7 @@
                 <p><?= $member["name"] ?>様</p>
                 <div class="right">
                     <div class="btn_right"><a href="newuser.html" class="input_btn2">会員情報変更</a></div>
-                    <div class="btn_right"><a href="newuser.html" class="input_btn2">ログアウト</a></div>
+                    <div class="btn_right"><a href="login.html" class="input_btn2">ログアウト</a></div>
                 </div>
 
             <?php

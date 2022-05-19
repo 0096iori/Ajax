@@ -23,39 +23,33 @@
 
             if (isset($_SESSION["member"])) {
                 $member = $_SESSION["member"];
-
-                // $dbh = new PDO($dsn, $user, $password);
-                // $mail = $_SESSION["mail"];
-
-                // $sql = "SELECT * FROM members WHERE mail_address=:mail";
-                // $stmt = $dbh->prepare($sql);
-                // $stmt->bindValue(":mail", $mail);
-                // $stmt->execute();
-                // $members = $stmt->fetch();
             ?>
+                <div id="top_content">
+                    <p id="userName"><?= $member["name"] ?>様</p>
+                    <div class="right">
+                        <div class="btn_right2"><a href="newuser.html" class="input_btn3">会員情報変更</a></div>
+                        <div class="btn_right2"><a href="login.html" class="input_btn3">ログアウト</a></div>
+                    </div>
 
-                <p><?= $member["name"] ?>様</p>
-                <div class="right">
-                    <div class="btn_right"><a href="newuser.html" class="input_btn2">会員情報変更</a></div>
-                    <div class="btn_right"><a href="login.html" class="input_btn2">ログアウト</a></div>
-                </div>
-
-            <?php
+                <?php
             } else {
-            ?>
-                <p>このページは表示できません</p>
-                <a href="login.html">ログイン画面へ</a>
-            <?php
+                ?>
+                    <p>このページは表示できません</p>
+                    <a href="login.html">ログイン画面へ</a>
+                <?php
             }
 
-            ?>
+                ?>
 
 
 
-            <hr id="line">
+                <hr id="line">
 
-            <!--コンテンツ領域-->
-            <p>--コンテンツ領域--</p>
+                <!--コンテンツ領域-->
+                <div id="top_mainContent">
+                    <p>--コンテンツ領域--</p>
+                </div>
+                </div>
         </div>
     </main>
     <script>

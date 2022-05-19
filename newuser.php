@@ -25,6 +25,7 @@ try{
 
     $dbn = new PDO($dsn,$user,$password);
 
+    
 
     // プレースホルダ(パラメータ化)
     $sql = "UPDATE `members` SET `id`=?,`mail address`=?,`password`=?,`name`=?,`address`=?,`address2`=?,`telephone number`=?";

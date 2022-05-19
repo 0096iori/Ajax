@@ -16,10 +16,8 @@ try {
     $stmt = $dbh->prepare($sql);
     $stmt->bindValue(":mail", $mail);
     $stmt->bindValue(":pass", $pass);
-
     $stmt->execute();
 
-    // while ($member = $stmt->fetch(PDO::FETCH_ASSOC)) {
     if ($member = $stmt->fetch(PDO::FETCH_ASSOC)) {
         //ログイン認証　成功
 
@@ -27,12 +25,9 @@ try {
         unset($member["password"]);
         $_SESSION["member"] = $member;
         header("Location:top.php");
-        // exit;
-    // } else if ($mail != $member["mail_address"] || $pass != $member["password"]) {
     }else{    
         //ログイン認証　失敗
         header("Location:error.html");
-        // exit;
     }
 } catch (PDOException $e) {
     print("DB Connection Error!<br>" . $e->getMessage());

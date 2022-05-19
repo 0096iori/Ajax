@@ -89,12 +89,34 @@ table tr {
 
 /* トップページ 　ここから*/
 
+#top_content {
+    padding: 30px;
+}
+
+#userName {
+    margin-left: 20px;
+}
+
 #line {
     width: 100%;
+    margin: 20px;
 }
 
 .right {
+    float: right;
+    width: 50%;
+    margin: 10px 0;
+    display: block;
+}
+
+.btn_right2 {
+    margin: 10px 0;
     text-align: right;
+}
+
+#top_mainContent {
+    margin: 20px 0;
+    text-align: center;
 }
 
 /* トップページ 　ここまで*/

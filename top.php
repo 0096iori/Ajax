@@ -27,7 +27,7 @@
                 <div id="top_content">
                     <p id="userName"><?= $member["name"] ?>様</p>
                     <div class="right">
-                        <div class="btn_right2"><a href="newuser.html" class="input_btn3">会員情報変更</a></div>
+                        <div class="btn_right2"><a href="changeform.php" class="input_btn3">会員情報変更</a></div>
                         <div class="btn_right2"><a href="login.html" class="input_btn3">ログアウト</a></div>
                     </div>
 

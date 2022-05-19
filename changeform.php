@@ -12,7 +12,7 @@
 <body>
     <?php
         session_start();
-        if (isset($_SESSION["id"])) {
+        if (isset($_SESSION["member"])) {
     ?>
     <header>
         <h2>会員情報変更</h2>

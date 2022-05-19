@@ -3,8 +3,8 @@
 
 try{
    session_start();
-   if (isset($_SESSION["id"])) {
-    $id = $_SESSION["id"];
+   if (isset($_SESSION["member"])) {
+    $id = $_SESSION["member"]["id"];
     $mail = $_POST["mail"];
     $pass = $_POST["pass1"];
     $name = $_POST["name"];

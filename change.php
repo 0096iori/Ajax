@@ -22,7 +22,7 @@ try{
 
 
     // プレースホルダ(パラメータ化)
-    $sql = "UPDATE `members` SET `mail address`=:mailaddress,`password`=:password,`name`=:name,`address1`=:address1,`address2`=:address2,`telephone number`=:telephonenumber WHERE `id`=:id";
+    $sql = "UPDATE `members` SET `mail_address`=:mailaddress,`password`=:password,`name`=:name,`address1`=:address1,`address2`=:address2,`telephone_number`=:telephonenumber WHERE `id`=:id";
 
     // プリペアドステートメント
     $stmt = $dbn->prepare($sql);

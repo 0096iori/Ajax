@@ -23,7 +23,6 @@
             <!-- フォーム -->
             <form action="change.php" method="post">
                 <table>
-                    <!-- ログイン情報、会員情報など入力欄 -->
                     <tr>
                         <td class="index">メールアドレス</td>
                         <td><input type="email" name="mail" id="mail" class="input_txt" required></td>

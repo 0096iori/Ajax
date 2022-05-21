@@ -74,13 +74,6 @@
       </div>
 
   <?php
-      // echo ("メールアドレス：" . $mail . "<br>");
-      // echo ("パスワード：" . $pass . "<br>");
-      // echo ("お名前：" . $name . "<br>");
-      // echo ("住所1：" . $address1 . "<br>");
-      // echo ("住所2：" . $address2 . "<br>");
-      // echo ("電話番号：" . $phone . "<br>");
-      // echo ("<a href='top.php class='input_btn'>戻る</a>");
     } else {
       echo ("ログイン失敗 <br>");
       echo ("<a href='login.html'>再ログイン</a>");

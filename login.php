@@ -1,7 +1,7 @@
 <?php
     $dsn = "mysql:dbname=ajairu1;host=localhost";
     $user = "members";
-    $password = "";
+    $password = "root";
 
 try {
     session_start();

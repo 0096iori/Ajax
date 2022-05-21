@@ -23,7 +23,6 @@
             <!-- フォーム -->
             <form action="change.php" method="post">
                 <table>
-                    <!-- ログイン情報、会員情報など入力欄 -->
                     <tr>
                         <td class="index">メールアドレス</td>
                         <td><input type="email" name="mail" id="mail" class="input_txt" required></td>
@@ -55,7 +54,8 @@
                 </table>
                 <div id="btn_center">
                     <div>
-                        <input type="submit" value="キャンセル" id="input_btn1" class="input_btn">
+                        <a href="top.php" id="input_btn1" class="input_btn">キャンセル</a>
+                        <!-- <input type="submit" value="キャンセル" id="input_btn1" class="input_btn"> -->
                     </div>
                     <div>
                         <input type="submit" value="変更" id="input_btn2" class="input_btn">

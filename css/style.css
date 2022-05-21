@@ -128,7 +128,7 @@ table tr {
 #input_btn2 {
     text-align: center;
     width: 130px;
-    height: 50px;
+    /* height: 50px; */
     padding: 15px 0 10px 0;
     margin: 0 10px;
 }
@@ -145,14 +145,20 @@ table tr {
 /* 会員情報変更ページ　ここから */
 
 .btn_right {
-    /* width: 50%; */
     text-align: right;
     margin: 30px auto;
 }
 
-/* .input_btn2:hover {
-    transform: translateY(4px);
-    border-bottom: none;
-} */
+.change_index {
+    width: 100%;
+    text-align: center;
+}
+
+#input_btn3 {
+    text-align: center;
+    width: 130px;
+    padding: 10px 0;
+    /* margin: 0 10px; */
+} 
 
 /* 会員情報変更ページ　ここまで */

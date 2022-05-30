@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>会員情報変更</title>
 </head>
 
@@ -29,11 +30,11 @@
                     </tr>
                     <tr>
                         <td class="index">パスワード</td>
-                        <td><input type="text" name="pass1" id="pass1" class="input_txt" required></td>
+                        <td><input type="password" name="pass1" id="pass1" class="input_txt pass" required></td>
                     </tr>
                     <tr>
                         <td class="index">パスワード(確認)</td>
-                        <td><input type="text" name="pass2" id="pass2" class="input_txt" required></td>
+                        <td><input type="password" name="pass2" id="pass2" class="input_txt pass" required><span id="comparison"></span></td>
                     </tr>
                     <tr>
                         <td class="index">お名前</td>
@@ -62,7 +63,23 @@
                     </div>
                 </div>
             </form>
-
+            <script>
+                $(".pass").keyup(function(event) {
+                    if($("#pass2").val()!=""){
+                        if($("#pass2").val()==$("#pass1").val()){
+                            $("#comparison").text("");
+                            $("#input_btn2").removeAttr("disabled");
+                        }else{
+                            $("#comparison").text("パスワードが一致しません");
+                            $("#input_btn2").attr({"disabled":""});
+                        }
+                    }else{
+                        $("#comparison").text("");
+                        $("#input_btn2").removeAttr("disabled");
+                    }
+                    
+                });
+            </script>
         </div>
     </main>
     <?php

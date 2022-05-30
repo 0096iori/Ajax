@@ -84,6 +84,10 @@ table tr {
     box-shadow: none;
 }
 
+#comparison {
+    color: red;
+    font-size: 11px;
+}
 /* テンプレート　ここまで */
 
 

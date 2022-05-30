@@ -70,7 +70,7 @@
                             $("#comparison").text("");
                             $("#input_btn2").removeAttr("disabled");
                         }else{
-                            $("#comparison").text("パスワードが一致しません");
+                            $("#comparison").text(" パスワードが一致しません");
                             $("#input_btn2").attr({"disabled":""});
                         }
                     }else{

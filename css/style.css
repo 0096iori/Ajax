@@ -140,6 +140,10 @@ table tr {
     justify-content: space-between;
 }
 
+#newuser_txt {
+    text-align: center;
+}
+
 /* 新規登録ページ　ここまで */
 
 /* 会員情報変更ページ　ここから */
@@ -154,11 +158,10 @@ table tr {
     text-align: center;
 }
 
-#input_btn3 {
+.input_btn3 {
     text-align: center;
     width: 130px;
     padding: 10px 0;
-    /* margin: 0 10px; */
 } 
 
 /* 会員情報変更ページ　ここまで */

@@ -78,7 +78,7 @@
           </tr>
         </table>
         <div class="btn_center">
-          <a href="top.php" class="input_btn" id="input_btn3">戻る</a>
+          <a href="top.php" class="input_btn input_btn3">戻る</a>
         </div>
       </div>
 

@@ -54,6 +54,11 @@
       $_SESSION["member"]["address2"] = $address2;
       $_SESSION["member"]["telephone_number"] = $phone;
 
+      $hide_pass="";
+
+      for($i=0;$i<strlen($pass);$i++){
+        $hide_pass = $hide_pass."●";
+      };
 
   ?>
       <div class="center" id="change_text">
@@ -62,7 +67,7 @@
             <td class="change_index">メールアドレス　：　<?= $mail ?></td>
           </tr>
           <tr>
-            <td class="change_index">パスワード　：　<?= $pass ?></td>
+            <td class="change_index">パスワード　：　<?= $hide_pass ?></td>
           </tr>
           <tr>
             <td class="change_index">お名前　：　<?= $name ?></td>

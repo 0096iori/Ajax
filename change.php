@@ -46,6 +46,15 @@
 
       $count2 = $stmt->execute($params);
 
+      $_SESSION["member"]["id"] = $id;
+      $_SESSION["member"]["mail_address"] = $mail;
+      $_SESSION["member"]["password"] = $pass;
+      $_SESSION["member"]["name"]= $name;
+      $_SESSION["member"]["address1"] = $address1;
+      $_SESSION["member"]["address2"] = $address2;
+      $_SESSION["member"]["telephone_number"] = $phone;
+
+
   ?>
       <div class="center" id="change_text">
         <table>

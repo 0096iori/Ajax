@@ -89,8 +89,10 @@
 
   <?php
     } else {
-      echo ("ログイン失敗 <br>");
-      echo ("<a href='login.html'>再ログイン</a>");
+      echo ("<div class='center nopage'>");
+      echo ("<p>このページは表示できません</p>");
+      echo ("<div class=''btn_center><a href='login.html' class='input_btn log_btn'>ログイン画面へ</a></div>");
+      echo ("</div>");
     }
   } catch (Exception $e) {
     exit();

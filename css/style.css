@@ -180,6 +180,16 @@ table tr {
 
 /* 会員情報変更ページ　ここまで */
 
+.nopage {
+    text-align: center;
+}
+
+.log_btn {
+    width: 30%;
+    padding: 10px;
+}
+
+
 /* 斜めストライプ */
 body {
     /* height: 250px; */

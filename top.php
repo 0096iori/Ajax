@@ -14,17 +14,18 @@
         <h2>会員ページ</h2>
     </header> -->
         <main>
-            <div class="center" id="top_center">
-                <?php
-                $dsn = "mysql:dbname=ajairu1;host=localhost";
-                $user = "members";
-                $password = "root";
+            <?php
+            $dsn = "mysql:dbname=ajairu1;host=localhost";
+            $user = "members";
+            $password = "root";
 
-                session_start();
+            session_start();
 
-                if (isset($_SESSION["member"])) {
-                    $member = $_SESSION["member"];
-                ?>
+            if (isset($_SESSION["member"])) {
+                $member = $_SESSION["member"];
+            ?>
+                <div class="center" id="top_center">
+
                     <div id="top_content">
                         <p id="userName"><?= $member["name"] ?>様</p>
                         <div class="right">
@@ -35,21 +36,24 @@
                         </div>
                     </div>
 
-                <?php
-                } else {
-                ?>
-                    <p>このページは表示できません</p>
-                    <a href="login.html">ログイン画面へ</a>
-                <?php
-                }
-                ?>
-                <hr id="line">
+                    <hr id="line">
 
-                <!--コンテンツ領域-->
-                <div id="top_mainContent">
-                    <p>--コンテンツ領域--</p>
+                    <!--コンテンツ領域-->
+                    <div id="top_mainContent">
+                        <p>--コンテンツ領域--</p>
+                    </div>
                 </div>
-            </div>
+
+            <?php
+            } else {
+            ?>
+                <div class="center nopage">
+                    <p>このページは表示できません</p>
+                    <div class="btn_center"><a href="login.html" class="input_btn log_btn">ログイン画面へ</a></div>
+                </div>
+            <?php
+            }
+            ?>
     </div>
     </main>
     <script>

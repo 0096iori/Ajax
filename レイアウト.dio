@@ -1,0 +1,64 @@
+<mxfile host="65bd71144e">
+    <diagram id="G5XS1RAh--zs2ezETC0y" name="ページ1">
+        <mxGraphModel dx="1980" dy="1194" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.browserWindow;rSize=0;strokeColor=#666666;strokeColor2=#008cff;strokeColor3=#c4c4c4;mainText=,;recursiveResize=0;" vertex="1" parent="1">
+                    <mxGeometry x="60" y="40" width="1020" height="1010" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Page 1" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="2">
+                    <mxGeometry x="60" y="12" width="110" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="https://www.draw.io" style="strokeWidth=1;shadow=0;dashed=0;align=center;html=1;shape=mxgraph.mockup.containers.anchor;rSize=0;fontSize=17;fontColor=#666666;align=left;" vertex="1" parent="2">
+                    <mxGeometry x="130" y="60" width="250" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="2">
+                    <mxGeometry x="80" y="140" width="860" height="820" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="○○様" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" vertex="1" parent="2">
+                    <mxGeometry x="200" y="170" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;fontSize=20;exitX=0.002;exitY=0.107;exitDx=0;exitDy=0;entryX=1.003;entryY=0.103;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="2" source="5" target="5">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="330" as="sourcePoint"/>
+                        <mxPoint x="430" y="280" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="検索" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="2">
+                    <mxGeometry x="690" y="265" width="80" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="2">
+                    <mxGeometry x="190" y="270" width="450" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="お気に入り店舗" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="2">
+                    <mxGeometry x="190" y="770" width="350" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="近くのお店" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="2">
+                    <mxGeometry x="180" y="390" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="ジャンル別" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;" vertex="1" parent="2">
+                    <mxGeometry x="190" y="560" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="2">
+                    <mxGeometry x="240" y="440" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="2">
+                    <mxGeometry x="324" y="440" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="2">
+                    <mxGeometry x="410" y="440" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="2">
+                    <mxGeometry x="240" y="630" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="2">
+                    <mxGeometry x="324" y="630" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;" vertex="1" parent="2">
+                    <mxGeometry x="410" y="630" width="60" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

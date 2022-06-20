@@ -22,7 +22,10 @@
 
     // if (isset($_SESSION["member"])) {
     //     $member = $_SESSION["member"];
-    ?>
+
+    $id = $_GET["id"];
+
+?>
     <div class="wrapper">
 
         <p id="top_copy"></p>
@@ -65,14 +68,15 @@
 
                 <?php
                 if (isset($_POST["favorite"])) {
+                    // データベースに保存
+                    // $sql = "INSERT INTO `` (  ) VALUES (  )";
+                    // $stmt = $dbn->prepare($sql);
+
                     echo <<<EOM
                         <script>
                             alert( "お気に入りに登録しました" )
                         </script>
                     EOM;
-                    // データベースに保存
-                    // $sql = "INSERT INTO `` (  ) VALUES (  )";
-                    // $stmt = $dbn->prepare($sql);
                 }
                 ?>
             </div>
@@ -103,9 +107,13 @@
     </div>
 
     <script>
+        <?php
+        echo "var id ='$id';";
+        ?>
+        console.log(id);
+
         var key = "1f2d594a8625bc1a";
-        var name = "四季の味";
-        var url = `http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${key}&format=jsonp&name=${name}`;
+        var url = `http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=${key}&format=jsonp&id=${id}`;
 
         $.ajax({
             url: url,
@@ -113,7 +121,7 @@
             dataType: "jsonp"
         }).done(function(data) {
             console.log(data);
-            var demo_shop = data["results"]["shop"][1];
+            var demo_shop = data["results"]["shop"][0];
             var copy = demo_shop.catch;
             var name = demo_shop.name;
             var img = demo_shop.photo.pc.l;
@@ -125,7 +133,6 @@
             var holiday = demo_shop.close;
             var lat = demo_shop.lat;
             var lng = demo_shop.lng;
-
 
             $("#top_copy").html(copy);
             $("#name").html(name);

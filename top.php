@@ -40,7 +40,7 @@
 
                     <!--コンテンツ領域-->
                     <div id="top_mainContent">
-                        <form action="" method="get" class="search_div">
+                        <form action="Search.php" method="get" class="search_div">
                             <input type="search" name="keyword" placeholder="店名、キーワード、時間帯" class="key">
                             <input type="submit" class="input_btn" value="検索" class="search_btn">
                         </form>

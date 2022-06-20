@@ -56,9 +56,7 @@ if ($arr === NULL) {
     //表示
     echo "<div class='fashionable-box3'>";
     echo "<img src =".$img.">";
-    echo "<form method='GET' action='localhost/Ajax/shop?detail.php'>";
-    echo "<a href='localhost/Ajax/shop?detail.php?id=".$sid."'>";
-    echo "</form>";
+    echo "<a href='shop_detail.php?id=".$sid."'>";
     print_r($name);
     echo "</a>";
     echo "</br>";

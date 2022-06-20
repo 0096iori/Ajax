@@ -7,18 +7,27 @@ body {
 .wrapper {
     width: 70%;
     margin: 0 auto;
-    padding: 20px;
     background-color: #fff;
+    overflow: hidden;
 }
 
 #top_copy {
     width: 100%;
+    margin: 0;
+    padding: 20px 0 20px 50px;
+    color: #4e454a;
+    background-color: #eee9e6;
+}
+
+.top_area {
+    padding: 20px;
 }
 
 .flex01 {
     display: flex;
     justify-content: space-around;
     text-align: center;
+    margin-top: 10px;
 }
 
 #img {
@@ -27,10 +36,64 @@ body {
 
 .flex_center {
     width: 40%;
+    position: relative;
+}
+
+.flex_center table td {
+    padding: 5px;
+    line-height: 2;
+}
+
+#genre,
+#price {
+    padding-left: 40px;
+}
+
+.flex_tag {
+    position: absolute;
+    bottom: 30px;
+    left: 20%;
+    width: 60%;
+}
+
+.tag_box  {
+    border: 1px solid #000;
+    margin: 5px 40px 0 0;
+    padding: 0;
 }
 
 .flex_right {
     width: 20%;
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.right_btn {
+    width: 70%;
+    height: 40px;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 3%;
+    display: inline-block;
+    color: #727171;
+    font-size: 16px;
+}
+
+.right_btn:hover {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.favorite_btn {
+    background-color: #fcc800;
+    box-shadow: 0 4px 0 #d9a62e;
+}
+
+.keep_btn {
+    background-color: #badcad;
+    box-shadow: 0 4px 0 #93b881;
 }
 
 #img img {
@@ -39,7 +102,27 @@ body {
 
 .address {
     width: 70%;
-    margin: 50px auto 0 auto;
+    margin: 50px auto;
+}
+
+.address p {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.info {
+    border-collapse: collapse;
+}
+
+.info,
+.info th,
+.info td {
+    border: 1px solid #000;
+    line-height: 1.5;
+}
+
+.info th {
+    font-weight: normal;
 }
 
 #map {

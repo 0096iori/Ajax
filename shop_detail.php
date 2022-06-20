@@ -6,17 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>店名（店舗詳細ページ）</title>
 </head>
 
 <body>
+    <?php
+    $dsn = "mysql:dbname=ajairu1;host=localhost";
+    $user = "members";
+    $password = "root";
+
+    // session_start();
+
+    // if (isset($_SESSION["member"])) {
+    //     $member = $_SESSION["member"];
+    ?>
     <div class="wrapper">
+
+        <p id="top_copy"></p>
 
         <div class="top_area">
             <!-- お店キャッチ -->
-            <p id="top_copy"></p>
 
             <div class="flex01">
                 <!-- サムネ写真 -->
@@ -26,24 +38,43 @@
                 <div class="flex_center">
                     <h1 id="name"></h1>
 
-                    <!-- お店ジャンル名 -->
-                    <p>
-                        <label>ジャンル</label>
-                        <label id="genre"></label>
-                    </p>
+                    <div class="flex_tag">
+                        <table>
+                            <tr>
+                                <!-- お店ジャンル名 -->
+                                <td class="tag_box">ジャンル</td>
+                                <td><label id="genre"></label></td>
+                            </tr>
+                            <tr>
+                                <!-- 平均ディナー予算 -->
+                                <td class="tag_box">予算</td>
+                                <td><label id="price"></label></td>
+                            </tr>
+                        </table>
+                    </div>
 
-                    <!-- 平均ディナー予算 -->
-                    <p>
-                        <label>予算</label>
-                        <label id="price"></label>
-                    </p>
                 </div>
 
                 <!-- お気に入りボタン -->
                 <div class="flex_right">
-                    <button type="submit">お気に入り</button>
-                    <button type="submit">検討</button>
+                    <form method="post">
+                        <button type="submit" name="favorite" class="right_btn favorite_btn">お気に入り</button>
+                        <button type="submit" name="keep" class="right_btn keep_btn">検討</button>
+                    </form>
                 </div>
+
+                <?php
+                if (isset($_POST["favorite"])) {
+                    echo <<<EOM
+                        <script>
+                            alert( "お気に入りに登録しました" )
+                        </script>
+                    EOM;
+                    // データベースに保存
+                    // $sql = "INSERT INTO `` (  ) VALUES (  )";
+                    // $stmt = $dbn->prepare($sql);
+                }
+                ?>
             </div>
         </div>
 
@@ -107,12 +138,21 @@
             $("#holiday").html(holiday);
             $("#map").html("<iframe src='https://www.google.com/maps?q=" + lat + "," + lng + "&output=embed&t=m&z=16&hl=ja' width='100%' height='300px' style='border:0;' allowfullscreen='' loading='lazy'></iframe>")
 
-
-
         }).fail(function() {
             console.log("失敗")
         })
     </script>
+
+    <?php
+    // } else {
+    ?>
+    <!-- <div class="center nopage">
+            <p>このページは表示できません</p>
+            <div class="btn_center"><a href="login.html" class="input_btn log_btn">ログイン画面へ</a></div>
+        </div> -->
+    <?php
+    // }
+    ?>
 </body>
 
 </html>

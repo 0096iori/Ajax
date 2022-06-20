@@ -17,12 +17,12 @@
 
 <?php
 
-//$con には受け取った条件（変数）を挿入
-$con = "&lat=34.3443585&lng=134.0484635";
+//$key には受け取った条件（変数）を挿入
+$key = $_GET["keyword"];
 $api = "f8a3ef18e34e0c9b&format=json";
 //表示する件数をここで変更できる
 $count = "&count=20";
-$url = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=".$api.$con.$count;
+$url = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=".$api.$key.$count;
 $json = file_get_contents($url);
 $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 $arr = json_decode($json,true);

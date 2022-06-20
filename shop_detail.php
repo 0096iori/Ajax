@@ -45,12 +45,12 @@
                         <table>
                             <tr>
                                 <!-- お店ジャンル名 -->
-                                <td class="tag_box">ジャンル</td>
+                                <th class="tag_box">ジャンル</th>
                                 <td><label id="genre"></label></td>
                             </tr>
                             <tr>
                                 <!-- 平均ディナー予算 -->
-                                <td class="tag_box">予算</td>
+                                <th class="tag_box">予算</th>
                                 <td><label id="price"></label></td>
                             </tr>
                         </table>

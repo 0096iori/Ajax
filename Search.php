@@ -18,7 +18,7 @@
 <?php
 
 //$key には受け取った条件（変数）を挿入
-$key = $_GET["keyword"];
+$key = "&keyword=".$_GET["keyword"];
 $api = "f8a3ef18e34e0c9b&format=json";
 //表示する件数をここで変更できる
 $count = "&count=20";

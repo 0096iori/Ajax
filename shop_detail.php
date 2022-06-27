@@ -32,7 +32,7 @@
 
             <p class="top_copyBar">
                 <input value="＜　戻る" onclick="history.back();" type="button" class="back_btn">
-                ★<label id="top_copy"></label>★
+                <label id="top_copy"></label>
             </p>
 
             <div class="top_area">
@@ -51,12 +51,12 @@
                                 <tr>
                                     <!-- お店ジャンル名 -->
                                     <th><label class="tag_box">ジャンル</label></th>
-                                    <td><label id="genre"></label></td>
+                                    <td class="tag_td"><label id="genre"></label></td>
                                 </tr>
                                 <tr>
                                     <!-- 平均ディナー予算 -->
                                     <th><label class="tag_box">予算</label></th>
-                                    <td><label id="price"></label></td>
+                                    <td class="tag_td"><label id="price"></label></td>
                                 </tr>
                             </table>
                         </div>

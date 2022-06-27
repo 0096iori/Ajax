@@ -1,5 +1,5 @@
 body {
-    margin: 0!important;
+    margin: 0 !important;
     padding: 0;
     background: repeating-linear-gradient(-45deg, #ddd 0, #ddd 2px, #FFF 4px, #FFF 6px);
 }
@@ -11,12 +11,25 @@ body {
     overflow: hidden;
 }
 
-#top_copy {
+.top_copyBar {
     width: 100%;
     margin: 0;
-    padding: 20px 0 20px 50px;
-    color: #4e454a;
+    padding: 20px 0 20px 10px;
     background-color: #eee9e6;
+}
+
+.back_btn {
+    border: none;
+    background-color: #eee9e6;
+    color: #4682b4;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 30px;
+}
+
+#top_copy {
+    color: #4e454a;
+    font-size: 18px;
 }
 
 .top_area {
@@ -45,12 +58,11 @@ body {
 
 .flex_center table td {
     padding: 5px;
-    line-height: 2;
 }
 
 #genre,
 #price {
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .flex_tag {
@@ -60,9 +72,10 @@ body {
     width: 100%;
 }
 
-.tag_box  {
+.tag_box {
+    display: inline-block;
+    width: 6em;
     border: 1px solid #000;
-    margin: 5px 40px 0 0;
     padding: 0;
 }
 

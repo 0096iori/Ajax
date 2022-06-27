@@ -29,7 +29,11 @@
     ?>
         <div class="wrapper">
 
-            <p id="top_copy"></p>
+
+            <p class="top_copyBar">
+                <input value="＜　戻る" onclick="history.back();" type="button" class="back_btn">
+                ★<label id="top_copy"></label>★
+            </p>
 
             <div class="top_area">
                 <!-- お店キャッチ -->
@@ -46,12 +50,12 @@
                             <table>
                                 <tr>
                                     <!-- お店ジャンル名 -->
-                                    <th class="tag_box">ジャンル</th>
+                                    <th><label class="tag_box">ジャンル</label></th>
                                     <td><label id="genre"></label></td>
                                 </tr>
                                 <tr>
                                     <!-- 平均ディナー予算 -->
-                                    <th class="tag_box">予算</th>
+                                    <th><label class="tag_box">予算</label></th>
                                     <td><label id="price"></label></td>
                                 </tr>
                             </table>

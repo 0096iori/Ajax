@@ -9,15 +9,14 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <title>お気に入り一覧</title>
+    <title>検討リスト一覧</title>
 </head>
 
 <body>
     <div class="center">
         <input value="＜　戻る" onclick="history.back();" type="button" class="back_btn white_back">
-        <h2>お気に入り一覧</h2>
-        <div class="favorite_list" id="result"></div>
-
+        <h2>検討リスト一覧</h2>
+        <div class="todo_list" id="result"></div>
 
         <?php
 
@@ -31,7 +30,7 @@
         if (isset($_SESSION["member"])) {
             $member = $_SESSION["member"];
 
-            $sql = "SELECT * FROM favorite WHERE member_id = :member_id";
+            $sql = "SELECT * FROM todo_list WHERE member_id = :member_id";
             $stmt = $dbh->prepare($sql);
             $stmt->bindValue(":member_id", $member["id"]);
             $stmt->execute();

@@ -45,7 +45,10 @@
                             <input type="submit" class="input_btn" value="検索" class="search_btn">
                         </form>
                         <div id="favorite">
-                            <a href="favorite_list.php" class="input_btn top_btn">お気に入り一覧</a>
+                            <a href="favorite_list.php" class="input_btn top_btn" id="favorite_btn">お気に入り一覧</a>
+                        </div>
+                        <div id="keep">
+                            <a href="todo_list.php" class="input_btn top_btn" id="keep_btn">検討リスト一覧</a>
                         </div>
                         <div>
                             <h4>おすすめのお店</h4>

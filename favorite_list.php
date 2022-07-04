@@ -14,7 +14,7 @@
 
 <body>
     <div class="center">
-        <input value="＜　戻る" onclick="history.back();" type="button" class="back_btn white_back">
+    <a href="top.php" class="backbtn_top">＜　ＴＯＰ</a>
         <h2>お気に入り一覧</h2>
         <div class="favorite_list" id="result"></div>
 

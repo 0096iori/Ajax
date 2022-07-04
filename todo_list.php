@@ -14,9 +14,10 @@
 
 <body>
     <div class="center">
-        <input value="＜　戻る" onclick="history.back();" type="button" class="back_btn white_back">
+        <a href="top.php" class="backbtn_top">＜　ＴＯＰ</a>
         <h2>検討リスト一覧</h2>
-        <div class="todo_list" id="result"></div>
+        <!-- 検討中の店 -->
+        <div id="todo"></div>
 
         <?php
 
@@ -30,7 +31,14 @@
         if (isset($_SESSION["member"])) {
             $member = $_SESSION["member"];
 
-            $sql = "SELECT * FROM todo_list WHERE member_id = :member_id";
+            if (isset($_POST["done_btn"])) {
+                $sql2 = "UPDATE todo_list SET flag ='0' WHERE shop_id = :id";
+                $stmt2 = $dbh->prepare($sql2);
+                $stmt2->bindValue(":id", $_POST["id"]);
+                $stmt2->execute();
+            }
+
+            $sql = "SELECT * FROM todo_list WHERE member_id = :member_id and flag = '1' ORDER BY id DESC";
             $stmt = $dbh->prepare($sql);
             $stmt->bindValue(":member_id", $member["id"]);
             $stmt->execute();
@@ -59,29 +67,34 @@
 
                         result +=
                             "<div  class='list_fav'>" +
-                            "<p class='fav_box'><img src='" + shop.photo.pc.m + "' class='favorite_img'><labe; class='favorite_name'>" + shop.name + "</label></p>" +
+                            "<form method='post'>" +
+                            "<p class='fav_box'>" +
+                            "<img src='" + shop.photo.pc.m + "' class='favorite_img'>" +
+                            "<label class='favorite_name'>" + shop.name + "</label>" +
+                            "<label class='todobtn_right'><button type='submit' name='done_btn' class='todo_btn' id='done_btn'>行った！</button>" +
+                            "<input type='hidden'  name='id' value='" + shop.id + "'>" +
+                            "</p>" +
+                            "</form>" +
                             "</div>";
 
-                        $("#result").append(result);
+                        $("#todo").append(result);
 
                     }).fail(function() {
                         console.log("失敗");
                     })
                 </script>
 
-    </div>
-<?php
-
+            <?php
             }
         } else {
-?>
-<div class="center nopage">
-    <p>このページは表示できません</p>
-    <div class="btn_center"><a href="login.html" class="input_btn log_btn">ログイン画面へ</a></div>
-</div>
-<?php
+            ?>
+            <div class="center nopage">
+                <p>このページは表示できません</p>
+                <div class="btn_center"><a href="login.html" class="input_btn log_btn">ログイン画面へ</a></div>
+            </div>
+        <?php
         }
-?>
+        ?>
 </body>
 
 </html>

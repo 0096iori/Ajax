@@ -150,6 +150,16 @@
 
             echo '<script type="text/javascript">alert("お気に入りに追加しました");</script>';
         }
+
+        if (isset($_POST["keep"])) {
+            $sql2 = "INSERT INTO todo_list(member_id, shop_id) VALUES (:member_id, :shop_id)";
+            $stmt2 = $dbn->prepare($sql2);
+            $stmt2->bindValue(":member_id", $member["id"]);
+            $stmt2->bindValue(":shop_id", $id);
+            $result2 = $stmt2->execute();
+
+            echo '<script type="text/javascript">alert("検討リストに追加しました");</script>';
+        }
     } else {
         ?>
         <div class="center nopage">

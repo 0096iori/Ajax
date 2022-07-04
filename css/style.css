@@ -70,7 +70,7 @@ table tr {
     display: inline-block;
     color: #000;
     text-decoration: none;
-    border-radius: 5%;
+    border-radius: 5px;
     background-color: #f0f8ff;
     box-shadow: 0 4px 0 #c0c5c2;
 }
@@ -140,8 +140,20 @@ table tr {
     padding-left: 20px;
 }
 
-#favorite {
-    text-align: right;
+#favorite,
+#keep {
+    text-align: right !important;
+    margin-top: 20px;
+}
+
+#favorite_btn {
+    background-color: #fcc800;
+    box-shadow: 0 4px 0 #d9a62e;
+}
+
+#keep_btn {
+    background-color: #badcad;
+    box-shadow: 0 4px 0 #93b881;
 }
 
 .photo {
@@ -230,6 +242,10 @@ body {
 
 /* お気に入り一覧ページ */
 
+.white_back {
+    background-color: #fff;
+}
+
 .list_fav {
     padding: 20px;
     margin: 20px 0;
@@ -250,4 +266,36 @@ body {
 
 .favorite_name {
     margin-left: 50px;
+}
+
+/* 検討リストページ */
+
+.backbtn_top {
+    text-decoration: none;
+    font-size: 18px;
+    color: #4682b4;
+    font-weight: 600;
+}
+
+.todobtn_right {
+    margin-left: 100px;
+}
+
+.todo_btn {
+    margin: 0 5px;
+    padding: 5px 10px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+#done_btn {
+    color: #fff;
+    border: none;
+    background-color: #a3b9e0;
+    box-shadow: 0 3px 0 #7a99cf;
+}
+
+#done_btn:hover {
+    transform: translateY(3px);
+    box-shadow: none;
 }

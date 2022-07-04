@@ -50,13 +50,46 @@
                         <div>
                             <h4>おすすめのお店</h4>
                             <div id="recommendation">
+                            <?php
+                            $api = "key=f8a3ef18e34e0c9b";
+                            $format = "format=json";
+                            $address = "address=".$member["address1"];
+                            $count = "count=12";
+                            $url = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?".$api."&".$format."&".$address."&".$count;
+                            echo $url;
+                            $json = file_get_contents($url);
+                            $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+                            $arr = json_decode($json,true);
+                            
+                            if ($arr === NULL) {
+                                //なかった場合の処理
+                                return;
+                            }else{
+                                //代入変数の宣言
+                                $json_count = count($arr["results"]["shop"]);
+                              
+                                //countした数まで表示
+                                for($i=0; $i<$json_count; $i++){
+                                  $shop = $arr["results"]["shop"][$i];
+                                  $img =  $shop["photo"]["pc"]["l"];
+                                  $id = $shop["id"];
+                                  //$open = $shop
+                              
+                                  echo "<a href='shop_detail.php?id=".$id."'><img src='".$img."' alt='logo' class='photo'></a>";
+                              
+                                }
+                              
+                            }
+                            ?>
+                            </div>
+                            <!-- <div id="recommendation">
                                 <a href="shop_detail.php?id=J001286406"><img src="image/fd401527.jpg" alt="" class="photo"></a>
                                 <a href="shop_detail.php?id=J001286406"><img src="image/beaf2.jpg" alt="" class="photo"></a>
                                 <a href="shop_detail.php?id=J001286406"><img src="image/bread.jpg" alt="" class="photo"></a>
                                 <a href="shop_detail.php?id=J001286406"><img src="image/chinese-st.jpg" alt="" class="photo"></a>
                                 <a href="shop_detail.php?id=J001286406"><img src="image/cokkie.jpg" alt="" class="photo"></a>
                                 <a href="shop_detail.php?id=J001286406"><img src="image/fried-salmon.jpg" alt="" class="photo"></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

@@ -43,6 +43,20 @@
                         <form action="Search.php" method="get" class="search_div">
                             <input type="search" name="keyword" placeholder="店名、キーワード、時間帯" class="key">
                             <input type="submit" class="input_btn" value="検索" class="search_btn">
+                            <div class="container">
+                            <br>
+                            <input type="checkbox" name="wifi" value="1">WiFiあり
+		                    <input type="checkbox" name="course" value="1">コースあり
+		                    <input type="checkbox" name="free_drink" value="1">飲み放題あり
+		                    <input type="checkbox" name="free_food" value="1">食べ放題あり
+		                    <input type="checkbox" name="private_room" value="1">個室あり
+                            <br>
+                            <input type="checkbox" name="non_smoking" value="1">禁煙席あり
+                            <input type="checkbox" name="charter" value="1">貸切可
+                            <input type="checkbox" name="parking" value="1">駐車場有
+                            <input type="checkbox" name="midnight" value="1">21時以降も営業
+                            <input type="checkbox" name="english" value="1">英語メニューあり
+                            </div>
                         </form>
                         <div id="favorite">
                             <a href="favorite_list.php" class="input_btn top_btn" id="favorite_btn">お気に入り一覧</a>

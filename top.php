@@ -59,7 +59,6 @@
                             $address = "address=".$member["address1"];
                             $count = "count=12";
                             $url = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?".$api."&".$format."&".$address."&".$count;
-                            echo $url;
                             $json = file_get_contents($url);
                             $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
                             $arr = json_decode($json,true);

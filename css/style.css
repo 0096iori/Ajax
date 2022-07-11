@@ -89,6 +89,13 @@ table tr {
     font-size: 11px;
 }
 
+.fa{
+  font-size:30px;
+}
+#rating{
+  font-size:0;
+  width:140px;
+}
 /* テンプレート　ここまで */
 
 
@@ -156,13 +163,7 @@ table tr {
     box-shadow: 0 4px 0 #93b881;
 }
 
-.photo {
-    width: 130px;
-    height: 100px;
-    padding: 5px 10px;
-}
-
-.photo:hover {
+.inside:hover {
     transform: scale(1.1, 1.1);
     transition: 0.3s;
     border-radius: 20%;

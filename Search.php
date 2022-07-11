@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-    <link href="style.css"media="all" rel="stylesheet">
+    <link href="css/style.css"media="all" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </header>
@@ -19,10 +19,21 @@
 
 //$key には受け取った条件（変数）を挿入
 $key = "&keyword=".$_GET["keyword"];
+$wifi = "&wifi=".$_GET["wifi"];
+$course = "&course=".$_GET["course"];
+$free_drink = "&free_drink=".$_GET["free_drink"];
+$free_food = "&free_food=".$_GET["free_food"];
+$private_room = "&private_room=".$_GET["private_room"];
+$non_smoking = "&non_smoking=".$_GET["non_smoking"];
+$charter = "&charter=".$_GET["charter"];
+$parking = "&parking=".$_GET["parking"];
+$midnight = "&midnight=".$_GET["midnight"];
+$english = "&english=".$_GET["english"];
 $api = "f8a3ef18e34e0c9b&format=json";
 //表示する件数をここで変更できる
 $count = "&count=20";
-$url = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=".$api.$key.$count;
+$url = "http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=".$api.$key.$wifi.$course.$free_drink.$free_food.$private_room
+       .$non_smoking.$charter.$parking.$midnight.$english.$count;
 $json = file_get_contents($url);
 $json = mb_convert_encoding($json, 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 $arr = json_decode($json,true);

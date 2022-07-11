@@ -45,16 +45,26 @@
                             <input type="submit" class="input_btn" value="検索" class="search_btn">
                             <div class="container">
                             <br>
+                            <input name="wifi" type="hidden" value="0">
                             <input type="checkbox" name="wifi" value="1">WiFiあり
+                            <input name="course" type="hidden" value="0">
 		                    <input type="checkbox" name="course" value="1">コースあり
+                            <input name="free_drink" type="hidden" value="0">
 		                    <input type="checkbox" name="free_drink" value="1">飲み放題あり
+                            <input name="free_food" type="hidden" value="0">
 		                    <input type="checkbox" name="free_food" value="1">食べ放題あり
+                            <input name="private_room" type="hidden" value="0">
 		                    <input type="checkbox" name="private_room" value="1">個室あり
                             <br>
+                            <input name="non_smoking" type="hidden" value="0">
                             <input type="checkbox" name="non_smoking" value="1">禁煙席あり
+                            <input name="charter" type="hidden" value="0">
                             <input type="checkbox" name="charter" value="1">貸切可
+                            <input name="parking" type="hidden" value="0">
                             <input type="checkbox" name="parking" value="1">駐車場有
+                            <input name="midnight" type="hidden" value="0">
                             <input type="checkbox" name="midnight" value="1">21時以降も営業
+                            <input name="english" type="hidden" value="0">
                             <input type="checkbox" name="english" value="1">英語メニューあり
                             </div>
                         </form>

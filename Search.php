@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-    <link href="style.css"media="all" rel="stylesheet">
+    <link href="css/search.css"media="all" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </header>
@@ -29,6 +29,7 @@ $charter = "&charter=".$_GET["charter"];
 $parking = "&parking=".$_GET["parking"];
 $midnight = "&midnight=".$_GET["midnight"];
 $english = "&english=".$_GET["english"];
+
 $api = "f8a3ef18e34e0c9b&format=json";
 //表示する件数をここで変更できる
 $count = "&count=20";
@@ -61,19 +62,29 @@ if ($arr === NULL) {
     $s_url = $shop["urls"]["pc"];
     $img =  $shop["photo"]["pc"]["m"];
     $add = $shop["address"];
+    $open = $shop["open"];
     $sid = $shop["id"];
+    $close = $shop["close"];
     //$open = $shop
 
     //表示
     echo "<div class='fashionable-box3'>";
-    echo "<img src =".$img.">";
+    echo "<div class='fashionable-box3_tape'>";
+    echo "</div>";
+    echo "<p class='fashionable-box3_title'>";
     echo "<a href='shop_detail.php?id=".$sid."'>";
     print_r($name);
     echo "</a>";
+    echo "</p>";
+    echo "<img src =".$img.">";
+    echo "<p class='fashionable-box3_subtitle'>";
+    echo $add;
+    echo "</p>";
+    echo "<p>";
+    echo $open;
     echo "</br>";
-    echo "<p>$add</p>";
-    echo "</a>";
-    echo "</br>";
+    echo "定休日:".$close;
+    echo "</p>";
     echo "</div>";
 
   }

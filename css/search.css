@@ -1,0 +1,48 @@
+html{
+    padding: 20px;              /* 余白指定 */
+    text-align:  center;        /* 中央寄せ */
+    background-color:  #ddd;    /* 背景色指定 */
+    height: 100px; 
+}
+
+.fashionable-box3{
+    width: 260px;/* 紙の横幅 100%にすると全幅表示に */
+    padding: 15px;
+    margin: 2em auto;
+    background: #fbc7f5;/* 紙の色 */
+    color: #000;/* 文字色 */
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.03);transform:rotate(2deg);
+    word-break: break-all;
+}
+
+.fashionable-box3 p{
+    margin: 0; 
+    padding: 0;
+    font-size: 0.9em;
+}
+
+.fashionable-box3_tape{
+    width: 50%;
+    height: 35px;
+    margin: -25px auto 0;
+    background: rgba(251, 234, 144, 0.5);/* テープの色 */
+    transform: rotate(-3deg);
+    opacity: 0.9;
+}
+
+.fashionable-box3_title{
+    text-align: center;
+    font-size: 1.3em!important;
+    margin-top: 10px!important;
+}
+
+.fashionable-box3_subtitle{
+    text-align: center;
+    font-size: 0.7em!important;
+    margin-bottom: 1em!important;
+}
+
+html{
+        background: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+    
+}
